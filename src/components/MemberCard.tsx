@@ -3,7 +3,7 @@ import type IMemberCard from "../interfaces/ImemberCard.ts";
 
 export default function MemberCard(props: { info: IMemberCard }) {
   return (
-    <div className="member-card">
+    <div className={props.info.active ? "member-card" : "member-card inactive"}>
       <div
         className="avatar"
         style={{
@@ -53,8 +53,9 @@ export default function MemberCard(props: { info: IMemberCard }) {
                 ? "#cc2eaaff"
                 : "#000000ff",
           }}
+          disabled={!props.info.active}
         >
-          {props.info.role}
+          Action
         </button>
       </div>
     </div>
