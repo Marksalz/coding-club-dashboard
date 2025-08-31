@@ -3,9 +3,10 @@ import { useState } from "react";
 
 export default function FilterBar(props: {
   toggleText: string;
+  switchLayout: string;
+  onSwitchLayout: () => void;
 }) {
   const [toggle, setToggle] = useState(false);
-  const [switchLayout, setSwichLayout] = useState("list");
 
   return (
     <div className="filter-bar">
@@ -22,13 +23,8 @@ export default function FilterBar(props: {
         />
       </div>
       <div className="filterbar-switch">
-        <button
-          className="swich-layout-btn"
-          onClick={() =>
-            setSwichLayout(switchLayout === "list" ? "grid" : "list")
-          }
-        >
-          {switchLayout}
+        <button className="swich-layout-btn" onClick={props.onSwitchLayout}>
+          {props.switchLayout}
         </button>
       </div>
     </div>
