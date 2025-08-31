@@ -39,7 +39,7 @@ const memberInfo: IMemberCard[] = [
 ];
 
 function App() {
-  const [members, setMembers] = useState(memberInfo);
+  const [members] = useState(memberInfo);
   const [switchLayout, setSwitchLayout] = useState("list");
 
   return (
