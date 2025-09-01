@@ -1,13 +1,12 @@
 import "../styles/App.css";
-import { useState } from "react";
 
 export default function FilterBar(props: {
   toggleText: string;
+  toggle: boolean;
+  onToggle: () => void;
   switchLayout: string;
   onSwitchLayout: () => void;
 }) {
-  const [toggle, setToggle] = useState(false);
-
   return (
     <div className="filter-bar">
       <div className="filterbar-toggle">
@@ -18,8 +17,8 @@ export default function FilterBar(props: {
           id="toggle-checkbox"
           type="checkbox"
           className="filterbar-toggle-input"
-          checked={toggle}
-          onChange={() => setToggle(!toggle)}
+          checked={props.toggle}
+          onChange={props.onToggle}
         />
       </div>
       <div className="filterbar-switch">

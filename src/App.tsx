@@ -41,18 +41,25 @@ const memberInfo: IMemberCard[] = [
 function App() {
   const [members] = useState(memberInfo);
   const [switchLayout, setSwitchLayout] = useState("list");
+  const [toggle, setToggle] = useState(false);
 
   return (
     <div className="dashboard">
       <Header text="Campus Club Dashboard" />
       <FilterBar
         toggleText="Show only active members"
+        toggle={toggle}
+        onToggle={() => setToggle(toggle === true ? false : true)}
         switchLayout={switchLayout}
         onSwitchLayout={() =>
           setSwitchLayout(switchLayout === "list" ? "grid" : "list")
         }
       />
-      <MembersList members={members} layout={switchLayout} />
+      <MembersList
+        members={members}
+        layout={switchLayout}
+        showActive={toggle}
+      />
     </div>
   );
 }
