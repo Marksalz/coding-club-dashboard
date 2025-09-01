@@ -75,6 +75,14 @@ header {
   box-sizing: border-box;
 }
 
+.members-grid .member-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
 .member-card.inactive {
   opacity: 0.6;
 }
@@ -119,6 +127,13 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  align-items: stretch;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   align-items: stretch;
 }
 

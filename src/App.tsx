@@ -52,7 +52,7 @@ function App() {
           setSwitchLayout(switchLayout === "list" ? "grid" : "list")
         }
       />
-      <MembersList members={members} />
+      <MembersList members={members} layout={switchLayout} />
     </div>
   );
 }
