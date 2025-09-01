@@ -162,3 +162,13 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
+
+.footer {
+  font-size: 0.85rem;
+  color: #b0b3b8;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  margin-top: 20px;
+  position: static;
+}

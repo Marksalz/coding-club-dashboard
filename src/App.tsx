@@ -4,6 +4,7 @@ import FilterBar from "./components/FilterBar.tsx";
 import type IMemberCard from "./interfaces/ImemberCard.ts";
 import MembersList from "./components/MembersList.tsx";
 import { useState } from "react";
+import Footer from "./components/Footer.tsx";
 
 const memberInfo: IMemberCard[] = [
   {
@@ -60,6 +61,7 @@ function App() {
         layout={switchLayout}
         showActive={toggle}
       />
+      <Footer />
     </div>
   );
 }
