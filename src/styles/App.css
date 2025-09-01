@@ -101,6 +101,35 @@ header {
   justify-content: center;
 }
 
+.avatar.role-leader,
+.action-btn.role-leader {
+  background-color: #3498db;
+}
+.role.role-leader {
+  color: #3498db;
+}
+.avatar.role-member,
+.action-btn.role-member {
+  background-color: #2ecc71;
+}
+.role.role-member {
+  color: #2ecc71;
+}
+.avatar.role-guest,
+.action-btn.role-guest {
+  background-color: #cc2eaaff;
+}
+.role.role-guest {
+  color: #cc2eaaff;
+}
+.avatar.role-default,
+.action-btn.role-default {
+  background-color: #000000ff;
+}
+.role.role-default {
+  color: #000000ff;
+}
+
 .info {
   display: grid;
   grid-template-columns: 2fr 1fr;
