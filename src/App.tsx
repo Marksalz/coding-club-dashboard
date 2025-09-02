@@ -86,6 +86,7 @@ function App() {
           setSwitchLayout(switchLayout === "list" ? "grid" : "list")
         }
       />
+
       <MembersList
         members={members}
         layout={switchLayout}
