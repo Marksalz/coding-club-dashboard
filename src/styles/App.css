@@ -75,6 +75,14 @@ header {
   box-sizing: border-box;
 }
 
+.members-grid .member-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
 .member-card.inactive {
   opacity: 0.6;
 }
@@ -91,6 +99,35 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.avatar.role-leader,
+.action-btn.role-leader {
+  background-color: #3498db;
+}
+.role.role-leader {
+  color: #3498db;
+}
+.avatar.role-member,
+.action-btn.role-member {
+  background-color: #2ecc71;
+}
+.role.role-member {
+  color: #2ecc71;
+}
+.avatar.role-guest,
+.action-btn.role-guest {
+  background-color: #cc2eaaff;
+}
+.role.role-guest {
+  color: #cc2eaaff;
+}
+.avatar.role-default,
+.action-btn.role-default {
+  background-color: #000000ff;
+}
+.role.role-default {
+  color: #000000ff;
 }
 
 .info {
@@ -122,6 +159,13 @@ header {
   align-items: stretch;
 }
 
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
 button {
   border-radius: 12px;
   border: 1px solid transparent;
@@ -146,4 +190,14 @@ button:focus-visible {
 button:disabled {
   cursor: not-allowed;
   opacity: 0.4;
+}
+
+.footer {
+  font-size: 0.85rem;
+  color: #b0b3b8;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  margin-top: 20px;
+  position: static;
 }

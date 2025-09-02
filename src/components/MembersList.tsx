@@ -5,10 +5,16 @@ import MemberCard from "./MemberCard.tsx";
 export default function MembersList(props: {
   members: IMemberCard[];
   layout: string;
+  showActive: boolean;
 }) {
+  const containerClass =
+    props.layout === "grid" ? "members-grid" : "members-list";
+  const filteredMembers = props.showActive
+    ? props.members.filter((member) => member.active)
+    : props.members;
   return (
-    <div className="members-list">
-      {props.members.map((member, idx) => (
+    <div className={containerClass}>
+      {filteredMembers.map((member, idx) => (
         <MemberCard key={idx} info={member} />
       ))}
     </div>
